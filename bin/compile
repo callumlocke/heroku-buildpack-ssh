@@ -20,18 +20,18 @@
 mkdir -p /app/.ssh/
 chmod 700 /app/.ssh/
 
-echo "$SSH_KEY" > /app/.ssh/id_rsa
-chmod 600 /app/.ssh/id_rsa
+echo "$SSH_KEY" > /app/keys/id_rsa
+chmod 600 /app/keys/id_rsa
 
-echo 'StrictHostKeyChecking=no' > /app/.ssh/config
-chmod 600 /app/.ssh/config
+echo 'StrictHostKeyChecking=no' > /app/keys/config
+chmod 600 /app/keys/config
 
-echo '====> SAVED FILES IN /app/.ssh/'
+echo '====> SAVED FILES IN /app/ssh/'
 echo '====> DIRECTORY CONTENTS:'
-ls /app/.ssh/
+ls /app/keys/
 
-echo '====> cat /app/.ssh/config'
-cat /app/.ssh/config
+echo '====> cat /app/keys/config'
+cat /app/keys/config
 
-echo '====> cat /app/.ssh/id_rsa'
-cat /app/.ssh/id_rsa
+echo '====> cat /app/keys/id_rsa'
+cat /app/keys/id_rsa
