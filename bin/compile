@@ -17,8 +17,8 @@
 # this program.  If not, see <http://www.gnu.org/licenses/>.
 # -----------------------------------------------------------------------------
 
-mkdir -p /app/.ssh/
-chmod 700 /app/.ssh/
+mkdir -p /app/keys/
+chmod 700 /app/keys/
 
 echo "$SSH_KEY" > /app/keys/id_rsa
 chmod 600 /app/keys/id_rsa
