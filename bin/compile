@@ -17,20 +17,22 @@
 # this program.  If not, see <http://www.gnu.org/licenses/>.
 # -----------------------------------------------------------------------------
 
-mkdir -p /keys/
-chmod 757 /keys/
+mkdir -p ~/.ssh/
+chmod 700 ~/.ssh/
 
-echo "$SSH_KEY" > /keys/id_rsa
-chmod 600 /keys/id_rsa
+echo "$SSH_KEY" > ~/.ssh/id_rsa
+chmod 400 ~/.ssh/id_rsa
 
-echo 'StrictHostKeyChecking=no' > /keys/config
-chmod 600 /keys/config
+echo 'StrictHostKeyChecking=no' > ~/.ssh/config
+chmod 600 ~/.ssh/config
 
 # Echo some stuff to verify the files got created...
 echo '====> SAVED FILES IN '
-echo '====> ls /keys/'
-ls /keys/
-echo '====> cat /keys/config'
-cat /keys/config
-echo '====> cat /keys/id_rsa'
-cat /keys/id_rsa
+echo '====> ls ~/.ssh/'
+ls ~/.ssh/
+echo '====> dirname ~/.ssh/config'
+dirname ~/.ssh/config
+echo '====> cat ~/.ssh/config'
+cat ~/.ssh/config
+echo '====> cat ~/.ssh/id_rsa'
+cat ~/.ssh/id_rsa
