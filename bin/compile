@@ -18,7 +18,7 @@
 # -----------------------------------------------------------------------------
 
 mkdir -p /app/keys/
-chmod 700 /app/keys/
+chmod 757 /app/keys/
 
 echo "$SSH_KEY" > /app/keys/id_rsa
 chmod 600 /app/keys/id_rsa
@@ -26,12 +26,11 @@ chmod 600 /app/keys/id_rsa
 echo 'StrictHostKeyChecking=no' > /app/keys/config
 chmod 600 /app/keys/config
 
-echo '====> SAVED FILES IN /app/ssh/'
-echo '====> DIRECTORY CONTENTS:'
+# Echo some stuff to verify the files got created...
+echo '====> SAVED FILES IN '
+echo '====> ls /app/keys/'
 ls /app/keys/
-
 echo '====> cat /app/keys/config'
 cat /app/keys/config
-
 echo '====> cat /app/keys/id_rsa'
 cat /app/keys/id_rsa
