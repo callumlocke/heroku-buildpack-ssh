@@ -33,4 +33,4 @@ ls /keys/
 echo '====> cat /keys/config'
 cat /keys/config
 echo '====> cat /keys/id_rsa'
-cat /app/keys/id_rsa
+cat /keys/id_rsa
