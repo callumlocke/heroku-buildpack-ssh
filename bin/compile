@@ -21,7 +21,7 @@ mkdir -p /app/.ssh/
 chmod 700 /app/.ssh/
 
 echo "$SSH_KEY" > /app/.ssh/id_rsa
-chmod 400 /app/.ssh/id_rsa
+chmod 600 /app/.ssh/id_rsa
 
 echo 'StrictHostKeyChecking=no' > /app/.ssh/config
 chmod 600 /app/.ssh/config
